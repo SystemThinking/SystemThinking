@@ -1,0 +1,18 @@
+
+# General
+.DS_Store
+Thumbs.db
+*.log
+*.tmp
+
+# Python
+__pycache__/
+*.py[cod]
+
+# MkDocs
+/site/
+*.lock
+
+# OS and Editor junk
+.idea/
+.vscode/
