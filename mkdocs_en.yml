@@ -1,0 +1,15 @@
+site_name: SystemThinking.sk (EN)
+theme:
+  name: material
+  language: en
+
+plugins:
+  - search
+  - awesome-pages
+
+nav:
+  - Home: en/index.md
+  - Class: en/class_SystemThinkingInIT/index.md
+
+docs_dir: docs
+site_dir: site/en

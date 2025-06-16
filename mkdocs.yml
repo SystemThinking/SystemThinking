@@ -1,7 +1,19 @@
-site_name: KNIFE Project Docs
+site_name: SystemThinking.sk
 theme:
   name: material
+  language: sk
+
+plugins:
+  - search
+  - awesome-pages
+  - i18n:
+      default_language: sk
+      languages:
+        sk: Slovensky
+        en: English
+
 nav:
-  - Home: index.md
-docs_dir: docs
-site_dir: site
+  - Slovensky:
+      - Úvod: sk/index.md
+  - English:
+      - Home: en/index.md
