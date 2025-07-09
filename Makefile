@@ -1,5 +1,4 @@
-# Makefile pre Hugo deploy BEZ worktree
-# Používa sa len ak public/ NIE JE pripojený ako git worktree
+# Makefile pre Hugo deploy bez worktree
 
 HUGO = hugo
 PUBLIC_DIR = public
@@ -7,15 +6,15 @@ BRANCH = gh-pages
 
 .PHONY: build deploy clean
 
-# 1️⃣ Build: vygeneruje statický web do public/
+# Build: vytvorí obsah do public/
 build:
 	$(HUGO)
 
-# 2️⃣ Clean: vymaže public/ (použi, keď chceš čistý rebuild)
+# Clean: vymaže priečinok public/
 clean:
 	rm -rf $(PUBLIC_DIR)
 
-# 3️⃣ Deploy: inicializuje git v public/, nasadí do gh-pages
+# Deploy: inicializuje git v public/, nasadí na gh-pages (zmaže históriu, ale ty to nechceš riešiť teraz)
 deploy: build
 	cd $(PUBLIC_DIR) && \
 	git init && \
