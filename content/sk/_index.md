@@ -11,7 +11,7 @@
 
 <p align="center">
 <H1>
-  <img src="..//assets/img/3rstext.png" alt="SystemThinking Logo" width="80"/> 
+  <img src="../static/img/3rstext.png" alt="SystemThinking Logo" width="80"/> 
   <B> Systémové myslenie v IT </B>
   </H1>
 </p>
