@@ -1,1 +1,1 @@
-#HUGO branch
+# Hugo starter for SystemThinking.sk

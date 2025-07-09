@@ -1,0 +1,30 @@
+baseURL = "https://systemthinking.sk/"
+languageCode = "sk"
+defaultContentLanguage = "sk"
+defaultContentLanguageInSubdir = true
+title = "System Thinking"
+# theme = "docsy"
+theme="ananke"
+enableRobotsTXT = true
+pagerSize = 10
+
+[languages]
+  [languages.sk]
+    contentDir = "content/sk"
+    languageName = "Slovensky"
+    weight = 1
+    title = "Systémové myslenie"
+
+  [languages.en]
+    contentDir = "content/en"
+    languageName = "English"
+    weight = 2
+    title = "System Thinking"
+
+[params]
+  author = "Roman Kazička"
+  description = "Dvojjazyčný portál o systémovom myslení v IT"
+  images = ["img/journey.png"]
+
+[markup.goldmark.renderer]
+  unsafe = true
