@@ -1,8 +1,9 @@
 <div align="right">
-  <a href="../../sk/index.md">Slovensky</a> | <a href="../../en/index.md">English</a>
+  <a href="../../sk/class_SystemThinkingInIT/index.md">Slovensky</a> | <a href="../../en/class_SystemThinkingInIT/index.md/index.md">English</a>
 </div>
 
 # Course: System Thinking in IT
+
 
 ## Teaching since 2018. Key repositories:
 

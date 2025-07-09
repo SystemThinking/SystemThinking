@@ -1,10 +1,11 @@
 <div align="right">
-  <a href="../sk/index.md">Slovensky</a> | <a href="../en/index.md">English</a>
+  <a href="../../sk/class_SystemThinkingInIT/index.md">Slovensky</a> | <a href="../../en/class_SystemThinkingInIT/index.md">English</a>
 </div>
 
 # Predmet: Systémové myslenie v IT
 
 Výučba prebieha od roku 2018. Tu sú odkazy na študentské výstupy:
+
 ## Staršie ročníky (2017–2023)
 
 !!! info "Tieto ročníky sú dočasne hostované na starom webe [agnicoli.org](https://agnicoli.org), 
