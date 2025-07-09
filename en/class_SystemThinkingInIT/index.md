@@ -1,5 +1,5 @@
 <div align="right">
-  <a href="../sk/index.md">Slovensky</a> | <a href="../en/index.md">English</a>
+  <a href="../../sk/index.md">Slovensky</a> | <a href="../../en/index.md">English</a>
 </div>
 
 # Course: System Thinking in IT
