@@ -1,14 +1,14 @@
 <div align="right">
-  <a href="/SystemThinking/sk/">
+  <a href="/sk/">
     <img src="https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/svg/sk.svg" alt="Slovensky" width="24" />
   </a>
   &nbsp;
-  <a href="/SystemThinking/en/">
+  <a href="/en/">
     <img src="https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/svg/gb.svg" alt="English" width="24" />
   </a>
 </div>
 <p align="center">
-  <img src="..//assets/img/3rstext.png" alt="SystemThinking Logo" width="80"/> 
+  <img src="../assets/img/3rstext.png" alt="SystemThinking Logo" width="80"/> 
   <B> Systémové myslenie v IT </B>
 </p>
 
