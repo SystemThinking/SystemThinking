@@ -1,22 +1,26 @@
-# Makefile
+# Makefile pre Hugo deploy BEZ worktree
+# Používa sa len ak public/ NIE JE pripojený ako git worktree
 
-HUGO=hugo
-PUBLIC_DIR=public
-BRANCH=gh-pages
+HUGO = hugo
+PUBLIC_DIR = public
+BRANCH = gh-pages
 
 .PHONY: build deploy clean
 
-# Lokálny build
+# 1️⃣ Build: vygeneruje statický web do public/
 build:
 	$(HUGO)
 
-# Vyčistí priečinok public/ (POZOR: iba ak nemáš worktree!)
+# 2️⃣ Clean: vymaže public/ (použi, keď chceš čistý rebuild)
 clean:
 	rm -rf $(PUBLIC_DIR)
 
-# Deploy do gh-pages (cez existujúci worktree)
+# 3️⃣ Deploy: inicializuje git v public/, nasadí do gh-pages
 deploy: build
 	cd $(PUBLIC_DIR) && \
+	git init && \
+	git remote add origin git@github.com:SystemThinking/SystemThinking.git && \
+	git checkout -b $(BRANCH) && \
 	git add . && \
 	git commit -m "Deploy Hugo site" && \
-	git push origin $(BRANCH)
+	git push --force origin $(BRANCH)
