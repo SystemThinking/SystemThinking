@@ -8,9 +8,8 @@
   </a>
 </div>
 
-
 <p align="left">
-  <img src="../../assets/img/3rstext.png" alt="SystemThinking Logo" width="80"/>
+  <img src="../assets/img/3rstext.png" alt="SystemThinking Logo" width="80"/>
 </p>
 
 <h1 align="center">🌐 SystemThinking.sk</h1>
