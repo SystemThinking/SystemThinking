@@ -22,4 +22,4 @@ Welcome to my personal space focused on system thinking, education, and context-
 
 ➡️ Explore the section:
 
-- [System Thinking Course](class_SystemThinkingInIT/index.md)
+- [System Thinking Course](class_SystemThinkingInIT/)
