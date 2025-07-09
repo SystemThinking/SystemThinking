@@ -8,13 +8,15 @@
   </a>
 </div>
 
-<p align="left">
-  <img src="../assets/img/3rstext.png" alt="SystemThinking Logo" width="80"/>
+
+<p align="center">
+<H1>
+  <img src="..//assets/img/3rstext.png" alt="SystemThinking Logo" width="80"/> 
+  <B> Systémové myslenie v IT </B>
+  </H1>
 </p>
 
-<h1 align="center">🌐 SystemThinking.sk</h1>
 
-# System Thinking in IT
 
 Welcome to my personal space focused on system thinking, education, and context-aware methodologies.
 

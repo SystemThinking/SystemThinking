@@ -1,6 +1,16 @@
 <div align="right">
-  <a href="../../sk/class_SystemThinkingInIT/">Slovensky</a> | <a href="../../en/class_SystemThinkingInIT/">English</a>
+  <a href="/SystemThinking/sk/">
+    <img src="https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/svg/sk.svg" alt="Slovensky" width="24" />
+  </a>
+  &nbsp;
+  <a href="/SystemThinking/en/">
+    <img src="https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/svg/gb.svg" alt="English" width="24" />
+  </a>
 </div>
+<p align="center">
+  <img src="..//assets/img/3rstext.png" alt="SystemThinking Logo" width="80"/> 
+  <B> Systémové myslenie v IT </B>
+</p>
 
 # Predmet: Systémové myslenie v IT
 
