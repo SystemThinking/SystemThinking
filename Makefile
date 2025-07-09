@@ -10,17 +10,13 @@ BRANCH=gh-pages
 build:
 	$(HUGO)
 
-# Vyčistí priečinok public/
+# Vyčistí priečinok public/ (POZOR: iba ak nemáš worktree!)
 clean:
 	rm -rf $(PUBLIC_DIR)
 
-# Deploy do gh-pages
+# Deploy do gh-pages (cez existujúci worktree)
 deploy: build
 	cd $(PUBLIC_DIR) && \
-	git init && \
-	git remote add origin git@github.com:SystemThinking/SystemThinking.git && \
-	git checkout -b $(BRANCH) && \
 	git add . && \
 	git commit -m "Deploy Hugo site" && \
-	git push --force origin $(BRANCH)
-
+	git push origin $(BRANCH)
