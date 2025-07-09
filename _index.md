@@ -7,4 +7,4 @@
 
 ## Choose your language / Vyberte si jazyk
 
-- 🇬🇧 [English Version](en/index.md)
+- 🇬🇧 [English Version](en/_index.md)
