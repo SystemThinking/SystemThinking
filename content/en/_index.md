@@ -11,7 +11,7 @@
 
 <p align="center">
 <H1>
-  <img src="..//assets/img/3rstext.png" alt="SystemThinking Logo" width="80"/> 
+  <img src="/img/3rstext.png" alt="SystemThinking Logo" width="80"/> 
   <B> System Thinking in IT </B>
   </H1>
 </p>
@@ -22,4 +22,4 @@ Welcome to my personal space focused on system thinking, education, and context-
 
 ➡️ Explore the section:
 
-- [System Thinking Course](en/class_SystemThinkingInIT/)
+- [System Thinking Course](class_SystemThinkingInIT/)

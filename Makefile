@@ -1,24 +1,22 @@
-# Makefile pre Hugo deploy bez worktree
+# Makefile pre Hugo deploy do gh_hugo branch
 
 HUGO = hugo
-PUBLIC_DIR = public
-BRANCH = gh-pages
+REPO = https://github.com/SystemThinking/SystemThinking.git
+BRANCH = gh_hugo
+BUILD_DIR = public
 
-.PHONY: build deploy clean
+.PHONY: build clean deploy
 
-# Build: vytvorí obsah do public/
 build:
-	$(HUGO)
+	$(HUGO) -D
 
-# Clean: vymaže priečinok public/
 clean:
-	rm -rf $(PUBLIC_DIR)
+	rm -rf $(BUILD_DIR)/.git
 
-# Deploy: inicializuje git v public/, nasadí na gh-pages (zmaže históriu, ale ty to nechceš riešiť teraz)
-deploy: build
-	cd $(PUBLIC_DIR) && \
+deploy: build clean
+	cd $(BUILD_DIR) && \
 	git init && \
-	git remote add origin git@github.com:SystemThinking/SystemThinking.git && \
+	git remote add origin $(REPO) && \
 	git checkout -b $(BRANCH) && \
 	git add . && \
 	git commit -m "Deploy Hugo site" && \

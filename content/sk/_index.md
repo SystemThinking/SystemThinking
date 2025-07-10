@@ -11,7 +11,7 @@
 
 <p align="center">
 <H1>
-  <img src="../static/img/3rstext.png" alt="SystemThinking Logo" width="80"/> 
+  <img src="/img/3rstext.png" alt="SystemThinking Logo" width="80"/> 
   <B> Systémové myslenie v IT </B>
   </H1>
 </p>
@@ -22,4 +22,4 @@ Vitajte na stránke, ktorá zhŕňa moje aktivity v oblasti výučby a metodík 
 
 ➡️ Pokračujte do sekcie:
 
-- [Predmet Systémové myslenie v IT](sk/class_SystemThinkingInIT/)
+- [Predmet Systémové myslenie v IT](class_SystemThinkingInIT/)
