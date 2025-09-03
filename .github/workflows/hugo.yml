@@ -1,0 +1,32 @@
+name: Build & Deploy Hugo to gh_hugo
+
+on:
+  push:
+    branches:
+      - hugo-20250709   # zmeň na svoj zdrojový branch (napr. main)
+  workflow_dispatch:
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          submodules: true    # ak používaš tému ako submodule
+          fetch-depth: 0
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: '0.128.2'     # zmeň podľa potreby
+          extended: true
+
+      - name: Build
+        run: |
+          hugo --minify \
+            --cleanDestinationDir \
+            --baseURL "https://systemthinking.sk/"
+
+      
