@@ -38,7 +38,7 @@ Thumbs.db
 *.swp
 
 # 🚫 Ostatné súbory, ktoré nemajú ísť do Gitu
-.env
+.env,*
 .idea/
 .vscode/
 *.local
