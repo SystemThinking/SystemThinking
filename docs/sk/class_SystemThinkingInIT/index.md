@@ -17,5 +17,5 @@ kým neprebehne ich migrácia do GitHub infraštruktúry."
 
   <li><a class="icon-link" href="https://06-sth-projects.github.io/repo_sthdf-2023-2024/" target="_blank">🟦 Trieda 2023–2024</a></li>
   <li><a class="icon-link" href="https://06-sth-projects.github.io/repo_sthdf_2024-2025/" target="_blank">🟦 Trieda 2024–2025</a></li>
-  <li><a class="icon-link" href="https://06-sth-projects.github.io/repo_sthdf_2025-2026/" target="_blank">🟦 Trieda 2025–2026 – demo</a></li>
+  <li><a class="icon-link" href="https://github.com/06-STH-Projects/class_sthdf_2025-2026/" target="_blank">🟦 Trieda 2025–2026 – demo</a></li>
 </ul>
