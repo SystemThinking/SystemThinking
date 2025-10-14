@@ -23,3 +23,4 @@ Vitajte na stránke, ktorá zhŕňa moje aktivity v oblasti výučby a metodík 
 ➡️ Pokračujte do sekcie:
 
 - [Predmet Systémové myslenie v IT](class_SystemThinkingInIT/)
+ 
