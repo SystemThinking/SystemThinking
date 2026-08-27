@@ -5,6 +5,11 @@
   <a href="/en/"><img src="/img/gb.png" alt="English" width="22" /></a>
 </p>
 
+<div class="sheet-nav">
+  <a class="sheet-tab" href="/en/" aria-current="page">Sheet 01 &mdash; Home</a>
+  <a class="sheet-tab" href="class_SystemThinkingInIT/">Sheet 02 &mdash; Course</a>
+</div>
+
 <div class="title-block">
   <div><span class="k">Title</span><span class="v">System Thinking in IT</span></div>
   <div><span class="k">Drawn by</span><span class="v">R. Kazička</span></div>

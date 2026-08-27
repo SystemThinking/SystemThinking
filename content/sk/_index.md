@@ -5,6 +5,11 @@
   <a href="/en/"><img src="/img/gb.png" alt="English" width="22" /></a>
 </p>
 
+<div class="sheet-nav">
+  <a class="sheet-tab" href="/sk/" aria-current="page">Sheet 01 &mdash; Domov</a>
+  <a class="sheet-tab" href="class_SystemThinkingInIT/">Sheet 02 &mdash; Predmet</a>
+</div>
+
 <div class="title-block">
   <div><span class="k">Title</span><span class="v">Systémové myslenie v IT</span></div>
   <div><span class="k">Drawn by</span><span class="v">R. Kazička</span></div>
