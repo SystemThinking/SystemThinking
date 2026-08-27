@@ -69,7 +69,14 @@ body.bg-near-white {
   color: var(--line-strong);
   font-size: 1rem;
   max-width: none !important;
+  padding: 0 !important;
 }
+/* on non-home templates ananke adds one more wrapper (<article
+   class="pa3 pa4-ns ...">) around that same section, which the home
+   template doesn't have — its padding was pushing the course page's
+   content (and everything below it, including the footer) down
+   relative to the home page */
+main > article { padding: 0 !important; }
 main a { color: var(--line-strong); }
 main a:hover { color: var(--signal); }
 
