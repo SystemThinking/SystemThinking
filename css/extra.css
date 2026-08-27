@@ -1,0 +1,355 @@
+/* ---------------------------------------------------------------
+   SystemThinking.sk — "blueprint" visual identity
+   Tokens
+--------------------------------------------------------------- */
+:root {
+  --blueprint:       #102a42;
+  --blueprint-deep:  #081a2c;
+  --blueprint-panel: #14324e;
+  --line-strong:     #e3edf5;
+  --line-dim:        #a7c0d6;
+  --line-faint:      rgba(207,224,238,0.18);
+  --grid-line:       rgba(207,224,238,0.05);
+  --signal:          #ff7a4d;
+  --archived:        #8fa9c2;
+  --published:       #7fc8b0;
+  --font-display: 'Big Shoulders Stencil Display', 'Arial Narrow', sans-serif;
+  --font-body:    'IBM Plex Sans', 'Segoe UI', sans-serif;
+  --font-mono:    'IBM Plex Mono', ui-monospace, 'SFMono-Regular', monospace;
+}
+
+/* ---------------------------------------------------------------
+   Base page
+--------------------------------------------------------------- */
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
+
+/* the theme's default body_classes ("bg-near-white") is a Tachyons
+   class and outranks a bare `body` selector on specificity alone —
+   match the class explicitly so our palette actually wins */
+html { background: var(--blueprint); }
+html, body { overflow-x: hidden; }
+body,
+body.bg-near-white {
+  background: var(--blueprint);
+  background-image:
+    linear-gradient(var(--grid-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+  background-size: 34px 34px;
+  color: var(--line-strong);
+  min-height: 100vh;
+}
+
+/* registration / crop marks in the page corners */
+.reg {
+  position: fixed;
+  width: 18px; height: 18px;
+  pointer-events: none;
+  opacity: 0.45;
+  z-index: 5;
+}
+.reg::before, .reg::after { content: ""; position: absolute; background: var(--line-dim); }
+.reg::before { left: 50%; top: 0; width: 1px; height: 100%; transform: translateX(-50%); }
+.reg::after  { top: 50%; left: 0; height: 1px; width: 100%; transform: translateY(-50%); }
+.reg.tl { top: 14px; left: 14px; }
+.reg.tr { top: 14px; right: 14px; }
+.reg.bl { bottom: 14px; left: 14px; }
+.reg.br { bottom: 14px; right: 14px; }
+
+/* ---------------------------------------------------------------
+   Neutralise the theme's Tachyons wrapper around page content
+   (the <article class="cf ph3 ... f4 tc-l center measure-wide
+   lh-copy nested-links mid-gray"> that ananke wraps every page in)
+--------------------------------------------------------------- */
+.cf.tc-l.measure-wide.mid-gray {
+  text-align: left;
+  color: var(--line-strong);
+  font-size: 1rem;
+  max-width: none !important;
+}
+main a { color: var(--line-strong); }
+main a:hover { color: var(--signal); }
+
+/* dark cover header + footer the theme renders on every page */
+header:not(.journey-banner) [class*="bg-"],
+footer[class*="bg-"] {
+  background: var(--blueprint-deep) !important;
+}
+/* the padding here was sized for the nav + big cover title we just
+   hid/shrank; without them it left a tall empty band */
+header:not(.journey-banner) [class*="bg-"] {
+  padding-bottom: 6px !important;
+}
+header:not(.journey-banner) h1 {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: var(--line-dim) !important;
+}
+footer a { color: var(--line-strong) !important; }
+footer a:hover { color: var(--signal) !important; }
+
+/* the site-nav (brand link + bare language link) duplicates the
+   language switcher and title block already in the page content */
+header:not(.journey-banner) nav { display: none; }
+
+/* the home-page cover banner duplicates the language switcher already
+   in the page content; drop it instead of keeping the old clip-art */
+.journey-banner { display: none; }
+
+/* ---------------------------------------------------------------
+   Page chrome: language switcher, title block
+--------------------------------------------------------------- */
+#sth-page {
+  display: block;
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 0 24px 70px;
+  box-sizing: border-box;
+}
+@media (max-width: 640px) { #sth-page { padding: 0 18px 50px; } }
+
+.lang-switch {
+  text-align: right;
+  margin: 0 0 18px;
+}
+.lang-switch a { line-height: 0; text-decoration: none; border: none; margin-left: 10px; }
+.lang-switch img { vertical-align: middle; opacity: 0.75; transition: opacity 0.15s ease; }
+.lang-switch img:hover { opacity: 1; }
+
+.title-block {
+  border: 1px solid var(--line-faint);
+  background: var(--blueprint-panel);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+@media (max-width: 640px) { .title-block { grid-template-columns: 1fr 1fr; } }
+.title-block > div {
+  padding: 10px 14px;
+  border-right: 1px solid var(--line-faint);
+  border-bottom: none;
+}
+@media (max-width: 640px) {
+  .title-block > div:nth-child(2n) { border-right: none; }
+  .title-block > div:nth-child(-n+2) { border-bottom: 1px solid var(--line-faint); }
+}
+.title-block > div:last-child { border-right: none; }
+.title-block .k {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--line-dim);
+  margin-bottom: 4px;
+}
+.title-block .v {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--line-strong);
+  font-variant-numeric: tabular-nums;
+}
+.title-block .v.hot { color: var(--signal); }
+
+/* ---------------------------------------------------------------
+   Hero
+--------------------------------------------------------------- */
+.hero { padding: 44px 0 36px; }
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--signal);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.eyebrow::before { content: ""; width: 22px; height: 1px; background: var(--signal); display: inline-block; }
+
+#sth-page h1 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(2.4rem, 7vw, 4.4rem);
+  line-height: 0.98;
+  letter-spacing: 0.01em;
+  margin: 14px 0 20px;
+  text-wrap: balance;
+  color: var(--line-strong);
+}
+.lede {
+  max-width: 62ch;
+  font-size: 1.08rem;
+  color: var(--line-dim);
+}
+.lede strong { color: var(--line-strong); font-weight: 600; }
+
+.cta-row { margin-top: 28px; display: flex; gap: 16px; flex-wrap: wrap; align-items: center; }
+.cta {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--blueprint-deep) !important;
+  background: var(--signal);
+  border: none;
+  padding: 13px 22px;
+  text-decoration: none;
+  display: inline-block;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 12px 100%, 0 calc(100% - 12px));
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+.cta:hover { background: #ff8f68; color: var(--blueprint-deep) !important; transform: translateY(-1px); }
+.cta-ghost {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  letter-spacing: 0.06em;
+  color: var(--line-dim) !important;
+  text-decoration: none;
+  border-bottom: 1px dashed var(--line-faint);
+  padding-bottom: 2px;
+}
+.cta-ghost:hover { color: var(--line-strong) !important; border-color: var(--line-dim); }
+
+/* ---------------------------------------------------------------
+   3 Rs diagram card
+--------------------------------------------------------------- */
+.diagram-card {
+  margin-top: 46px;
+  border: 1px solid var(--line-faint);
+  background: var(--blueprint-deep);
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+}
+@media (max-width: 640px) { .diagram-card { grid-template-columns: 1fr; } }
+.diagram-fig {
+  padding: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-right: 1px solid var(--line-faint);
+}
+@media (max-width: 640px) { .diagram-fig { border-right: none; border-bottom: 1px solid var(--line-faint); } }
+.diagram-copy { padding: 26px 28px; }
+.diagram-copy .k {
+  font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.12em;
+  text-transform: uppercase; color: var(--signal);
+}
+#sth-page .diagram-copy h2 {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin: 8px 0 14px;
+  color: var(--line-strong);
+  text-wrap: balance;
+}
+.axis-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px; }
+.axis-list li {
+  font-family: var(--font-mono); font-size: 13px; color: var(--line-dim);
+  display: flex; gap: 10px;
+}
+.axis-list li::before { content: none; }
+.axis-list b { color: var(--line-strong); font-weight: 600; min-width: 16px; }
+
+.draw-line { stroke-dasharray: 340; stroke-dashoffset: 340; animation: draw 1.1s ease forwards; }
+.draw-line.d2 { animation-delay: .15s; }
+.draw-line.d3 { animation-delay: .3s; }
+@keyframes draw { to { stroke-dashoffset: 0; } }
+@media (prefers-reduced-motion: reduce) { .draw-line { animation: none; stroke-dashoffset: 0; } }
+
+/* ---------------------------------------------------------------
+   Course page: heading + revision table
+--------------------------------------------------------------- */
+#sth-page h2.section-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.9rem, 5vw, 2.6rem);
+  margin: 36px 0 8px;
+  color: var(--line-strong);
+  text-wrap: balance;
+}
+.section-lede { color: var(--line-dim); max-width: 64ch; margin-bottom: 30px; }
+
+.rev-wrap { overflow-x: auto; border: 1px solid var(--line-faint); margin-bottom: 40px; }
+table.rev { width: 100%; border-collapse: collapse; min-width: 620px; }
+table.rev caption {
+  text-align: left;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--line-dim);
+  background: var(--blueprint-panel);
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--line-faint);
+}
+table.rev th {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--line-dim);
+  text-align: left;
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--line-faint);
+  background: var(--blueprint-deep);
+}
+table.rev td {
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--grid-line);
+  font-size: 14px;
+  vertical-align: middle;
+}
+table.rev tr:last-child td { border-bottom: none; }
+table.rev tbody tr { transition: background 0.12s ease; }
+table.rev tbody tr:hover { background: rgba(207,224,238,0.05); }
+.rev-id { font-family: var(--font-mono); color: var(--line-strong); font-variant-numeric: tabular-nums; }
+.rev-year { font-family: var(--font-mono); font-variant-numeric: tabular-nums; color: var(--line-strong); }
+
+.status {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 4px 9px;
+  border: 1px solid currentColor;
+}
+.status.archived { color: var(--archived); }
+.status.published { color: var(--published); }
+.status.current { color: var(--signal); }
+.status .dot { width: 6px; height: 6px; border-radius: 50%; background: currentColor; }
+.status.current .dot { animation: pulse 1.6s ease-in-out infinite; }
+@keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.35; } }
+@media (prefers-reduced-motion: reduce) { .status.current .dot { animation: none; } }
+
+table.rev a { color: var(--line-strong); text-decoration-color: var(--line-faint); }
+table.rev a:hover { text-decoration-color: var(--signal); color: var(--signal); }
+table.rev .note { display: block; font-size: 11.5px; color: var(--line-dim); margin-top: 2px; }
+
+/* ---------------------------------------------------------------
+   Legacy helper classes kept for compatibility, retinted
+--------------------------------------------------------------- */
+.centered-link { display: block; text-align: center; margin: 1.5em 0; }
+
+.link-button, .link-button-yellow {
+  display: inline-block;
+  padding: 10px 18px;
+  background-color: var(--blueprint-panel);
+  color: var(--line-strong);
+  text-decoration: none;
+  border: 1px solid var(--line-faint);
+  font-weight: 600;
+  margin: 5px;
+  transition: background-color 0.2s ease;
+}
+.link-button:hover, .link-button-yellow:hover { background-color: var(--signal); color: var(--blueprint-deep); }
+
+.icon-link { color: var(--line-dim); text-decoration: none; font-weight: 600; margin: 0.5em; }
+.icon-link:hover { text-decoration: underline; color: var(--signal); }
