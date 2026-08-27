@@ -57,6 +57,11 @@
   {{- $environment := hugo.Environment | compare.Default "production" -}}
   <body class="ma0 {{ $.Param "body_classes"  | compare.Default "avenir bg-near-white"}} {{ $environment }}">
 
+    <div class="reg tl" aria-hidden="true"></div>
+    <div class="reg tr" aria-hidden="true"></div>
+    <div class="reg bl" aria-hidden="true"></div>
+    <div class="reg br" aria-hidden="true"></div>
+
    {{ block "header" . }}{{ partials.Include "site-header-v2.html" .}}{{ end }}
 
 
