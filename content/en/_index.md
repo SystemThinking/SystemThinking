@@ -11,12 +11,13 @@
 <div class="sheet-nav">
   <a class="sheet-tab" href="/en/" aria-current="page">Sheet 01 &mdash; Home</a>
   <a class="sheet-tab" href="class_systemthinkinginit/">Sheet 02 &mdash; Course</a>
+  <a class="sheet-tab" href="about/">Sheet 03 &mdash; About</a>
 </div>
 
 <div class="title-block">
   <div><span class="k">Title</span><span class="v">System Thinking in IT</span></div>
   <div><span class="k">Drawn by</span><span class="v">R. Kazička</span></div>
-  <div><span class="k">Sheet</span><span class="v">01 / 02</span></div>
+  <div><span class="k">Sheet</span><span class="v">01 / 03</span></div>
   <div><span class="k">Rev</span><span class="v hot">I &middot; 2025&ndash;2026</span></div>
 </div>
 

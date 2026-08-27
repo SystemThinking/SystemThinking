@@ -1,0 +1,22 @@
+<footer class="site-footer" role="contentinfo">
+  <div class="footer-inner">
+    <div class="footer-id">
+      <p class="footer-name">Roman Kazička, PhD.</p>
+      {{ if eq .Site.Language.Lang "sk" }}
+        <p class="footer-role">Data &amp; Enterprise Architect &middot; autor KNIFE, 7Ds, APV, CAA</p>
+      {{ else }}
+        <p class="footer-role">Data &amp; Enterprise Architect &middot; creator of KNIFE, 7Ds, APV, CAA</p>
+      {{ end }}
+    </div>
+    <div class="footer-links">
+      <a href="https://www.linkedin.com/in/romankazicka/" target="_blank" rel="me noopener">LinkedIn</a>
+      <a href="mailto:roman.kazicka@systemthinking.sk">Email</a>
+      {{ if eq .Site.Language.Lang "sk" }}
+        <a href="/sk/o-mne/">O mne</a>
+      {{ else }}
+        <a href="/en/about/">About</a>
+      {{ end }}
+    </div>
+  </div>
+  <p class="footer-copy">&copy; {{ now.Format "2006" }} Roman Kazička &middot; systemthinking.sk</p>
+</footer>

@@ -84,11 +84,60 @@ main a:hover { color: var(--signal); }
    template (journey-banner, no title) and every other template (a big
    dark title band) — that mismatch caused a layout jump between pages.
    Replace it everywhere with our own .page-header, identical on every
-   page, and keep only the footer on-brand. */
+   page. The default footer is replaced by our own site-footer.html
+   partial (see .site-footer rules below). */
 header { display: none; }
-footer[class*="bg-"] { background: var(--blueprint-deep) !important; }
-footer a { color: var(--line-strong) !important; }
-footer a:hover { color: var(--signal) !important; }
+
+.site-footer {
+  border-top: 1px solid var(--line-faint);
+  background: var(--blueprint-deep);
+  padding: 26px 24px 20px;
+}
+.footer-inner {
+  max-width: 980px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 16px 24px;
+}
+.footer-name {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--line-strong);
+  margin: 0 0 4px;
+}
+.footer-role {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--line-dim);
+  margin: 0;
+}
+.footer-links {
+  display: flex;
+  gap: 18px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.footer-links a {
+  color: var(--line-dim);
+  text-decoration: none;
+  border-bottom: 1px solid var(--line-faint);
+  padding-bottom: 2px;
+}
+.footer-links a:hover { color: var(--signal); border-color: var(--signal); }
+.footer-copy {
+  max-width: 980px;
+  margin: 18px auto 0;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--line-dim);
+  opacity: 0.7;
+}
 
 /* ---------------------------------------------------------------
    Page chrome: kicker + language switcher, title block
@@ -305,6 +354,39 @@ footer a:hover { color: var(--signal) !important; }
   text-wrap: balance;
 }
 .section-lede { color: var(--line-dim); max-width: 64ch; margin-bottom: 30px; }
+
+#sth-page h3.subsection {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--signal);
+  margin: 40px 0 14px;
+  font-weight: 600;
+}
+
+.spec-block {
+  border: 1px solid var(--line-faint);
+  background: var(--blueprint-panel);
+  margin-bottom: 20px;
+}
+.spec-block > div {
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--line-faint);
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 8px 16px;
+}
+.spec-block > div:last-child { border-bottom: none; }
+.spec-block .v {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--line-strong);
+  line-height: 1.6;
+}
+@media (max-width: 640px) {
+  .spec-block > div { grid-template-columns: 1fr; }
+}
 
 .rev-wrap { overflow-x: auto; border: 1px solid var(--line-faint); margin-bottom: 40px; }
 table.rev { width: 100%; border-collapse: collapse; min-width: 620px; }

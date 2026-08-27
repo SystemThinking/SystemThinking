@@ -11,12 +11,13 @@
 <div class="sheet-nav">
   <a class="sheet-tab" href="/sk/">Sheet 01 &mdash; Domov</a>
   <a class="sheet-tab" href="./" aria-current="page">Sheet 02 &mdash; Predmet</a>
+  <a class="sheet-tab" href="/sk/o-mne/">Sheet 03 &mdash; O mne</a>
 </div>
 
 <div class="title-block">
   <div><span class="k">Title</span><span class="v">Predmet STH v IT</span></div>
   <div><span class="k">Drawn by</span><span class="v">R. Kazička</span></div>
-  <div><span class="k">Sheet</span><span class="v">02 / 02</span></div>
+  <div><span class="k">Sheet</span><span class="v">02 / 03</span></div>
   <div><span class="k">Rev</span><span class="v hot">I &middot; 2025&ndash;2026</span></div>
 </div>
 

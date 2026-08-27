@@ -3,6 +3,33 @@
 <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Display:wght@500;700;800&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 {{ $extraCSS := resources.Get "css/extra.css" | minify | fingerprint }}
 <link rel="stylesheet" href="{{ $extraCSS.RelPermalink }}" integrity="{{ $extraCSS.Data.Integrity }}">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Roman Kazička",
+  "honorificSuffix": "PhD.",
+  "url": "https://systemthinking.sk/",
+  "email": "mailto:roman.kazicka@systemthinking.sk",
+  "jobTitle": "Data & Enterprise Architect",
+  "sameAs": [
+    "https://www.linkedin.com/in/romankazicka/",
+    "https://github.com/Roman-Kazicka"
+  ],
+  "alumniOf": {
+    "@type": "CollegeOrUniversity",
+    "name": "Slovak University of Technology in Bratislava (STU)"
+  },
+  "knowsAbout": [
+    "Enterprise Architecture",
+    "Systems Thinking",
+    "Business Process Management",
+    "TOGAF",
+    "Knowledge Management",
+    "Context-Aware Approach"
+  ]
+}
+</script>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-BYMYC4HQS9"></script>
 <script>
