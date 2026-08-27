@@ -1,9 +1,12 @@
 <div id="sth-page">
 
-<p class="lang-switch">
-  <a href="/sk/"><img src="/img/sk.svg" alt="Slovensky" width="22" /></a>
-  <a href="/en/"><img src="/img/gb.png" alt="English" width="22" /></a>
-</p>
+<div class="page-header">
+  <p class="page-kicker">System Thinking</p>
+  <p class="lang-switch">
+    <a href="/sk/"><img src="/img/sk.svg" alt="Slovensky" width="22" /></a>
+    <a href="/en/"><img src="/img/gb.png" alt="English" width="22" /></a>
+  </p>
+</div>
 
 <div class="sheet-nav">
   <a class="sheet-tab" href="/en/" aria-current="page">Sheet 01 &mdash; Home</a>
