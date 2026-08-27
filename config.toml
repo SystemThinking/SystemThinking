@@ -25,7 +25,6 @@ pagerSize = 10
   author = "Roman Kazička"
   description = "Dvojjazyčný portál o systémovom myslení v IT"
   images = ["img/journey.png"]
-  custom_css = ["css/extra.css"]
 
 [markup.goldmark.renderer]
   unsafe = true
