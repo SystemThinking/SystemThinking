@@ -7,7 +7,7 @@
 
 <div class="sheet-nav">
   <a class="sheet-tab" href="/sk/" aria-current="page">Sheet 01 &mdash; Domov</a>
-  <a class="sheet-tab" href="class_SystemThinkingInIT/">Sheet 02 &mdash; Predmet</a>
+  <a class="sheet-tab" href="class_systemthinkinginit/">Sheet 02 &mdash; Predmet</a>
 </div>
 
 <div class="title-block">
@@ -25,7 +25,7 @@
 <p class="lede">Vitajte na stránke, ktorá zhŕňa <strong>moje aktivity vo výučbe a v metodikách</strong> súvisiacich so systémovým myslením &mdash; od roku 2018, naprieč deviatimi ročníkmi predmetu.</p>
 
 <div class="cta-row">
-<a class="cta" href="class_SystemThinkingInIT/">Predmet Systémové myslenie v IT &rarr;</a>
+<a class="cta" href="class_systemthinkinginit/">Predmet Systémové myslenie v IT &rarr;</a>
 <a class="cta-ghost" href="/en/">EN version</a>
 </div>
 </div>

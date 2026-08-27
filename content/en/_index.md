@@ -7,7 +7,7 @@
 
 <div class="sheet-nav">
   <a class="sheet-tab" href="/en/" aria-current="page">Sheet 01 &mdash; Home</a>
-  <a class="sheet-tab" href="class_SystemThinkingInIT/">Sheet 02 &mdash; Course</a>
+  <a class="sheet-tab" href="class_systemthinkinginit/">Sheet 02 &mdash; Course</a>
 </div>
 
 <div class="title-block">
@@ -25,7 +25,7 @@
 <p class="lede">Welcome to the page that summarizes <strong>my teaching activities and methodologies</strong> related to system thinking &mdash; running since 2018, across nine editions of the course.</p>
 
 <div class="cta-row">
-<a class="cta" href="class_SystemThinkingInIT/">System Thinking Course &rarr;</a>
+<a class="cta" href="class_systemthinkinginit/">System Thinking Course &rarr;</a>
 <a class="cta-ghost" href="/sk/">SK verzia</a>
 </div>
 </div>
