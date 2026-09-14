@@ -1,6 +1,13 @@
 # Predmet: Systémové myslenie v IT
 
 Výučba prebieha od roku 2018. Tu sú odkazy na študentské výstupy:
+
+## 📦 Archív semestrálnych projektov
+
+[Prehľadná galéria všetkých študentských projektov ↗](https://agnicoli.org/_sub/prod/images/STHDF-Dashboarh/sthdf-archiv.html)
+— najrýchlejší spôsob, ako si prezrieť, čo študenti za tie roky vytvorili. Prehľadnejšie
+než prehrabávať sa jednotlivými ročníkmi nižšie.
+
 ## Staršie ročníky (2017–2023)
 
 !!! info "Tieto ročníky sú dočasne hostované na starom webe [agnicoli.org](https://agnicoli.org), 

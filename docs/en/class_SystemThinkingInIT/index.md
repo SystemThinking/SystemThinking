@@ -2,6 +2,12 @@
 
 ## Teaching since 2018. Key repositories:
 
+## 📦 Archive of semester projects
+
+[Browse the full project gallery ↗](https://agnicoli.org/_sub/prod/images/STHDF-Dashboarh/sthdf-archiv.html)
+— the fastest way to see what students have built over the years. More useful
+than digging through the individual cohort links below.
+
 !!! info "These classes are still hosted on the legacy site [agnicoli.org](https://agnicoli.org). They will be gradually migrated into GitHub."
 
 <ul>
