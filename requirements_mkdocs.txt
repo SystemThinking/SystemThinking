@@ -1,4 +1,0 @@
-mkdocs==1.6.1
-mkdocs-material==9.5.21
-mkdocs-static-i18n==1.3.0
-mkdocs-awesome-pages-plugin==2.9.2

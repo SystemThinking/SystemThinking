@@ -1,6 +1,0 @@
-
-* text=auto
-*.md text linguist-documentation
-*.yml text
-*.yaml text
-*.json text

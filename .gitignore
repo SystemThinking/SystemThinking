@@ -1,40 +1,4 @@
-####################################
-# Univerzálny .gitignore pre GitDocs-Lab demo
-# Pokrýva: MkDocs, Hugo, Docusaurus, VitePress
-####################################
-
-# 📦 Node.js / NPM závislosti
-node_modules/
-package-lock.json
-pnpm-lock.yaml
-yarn.lock
-
-# 🏗️ Výstupy z buildov
-/site/                     # MkDocs
-public/                   # Hugo
-/build/                    # Docusaurus
-.vitepress/dist/          # VitePress (ak bez podsložky)
-/docs/.vitepress/dist/     # VitePress (v podsložke)
-/dist/                     # iné systémy (napr. VuePress)
-/out/                      # všeobecný výstup
-
-# 🧠 Cache, dočasné, systémové súbory
-.cache/
-docs/.vitepress/cache/
+node_modules
+.docusaurus
+build
 .DS_Store
-Thumbs.db
-*.log
-*.zip
-*.tmp
-*.bak
-*.swp
-
-# 🚫 Ostatné súbory, ktoré nemajú ísť do Gitu
-.venv
-.env
-.idea/
-.vscode/
-*.local
-
-# 💡 GitHub Pages pomocné výstupy (ak robia ručne deploy)
-gh-pages/
