@@ -25,6 +25,14 @@
 
 <p class="section-lede">Teaching since 2018. Nine editions, nine revisions of the same idea &mdash; here are the links to the students' work.</p>
 
+<div class="archive-callout" style="border:1px solid var(--line-dim); border-radius:6px; padding:1rem 1.25rem; margin:1.5rem 0; background:var(--blueprint-panel);">
+  <strong style="color:var(--line-strong);">&#128230; Project archive</strong>
+  <p style="margin:0.4rem 0 0; color:var(--line-dim);">
+    <a href="https://agnicoli.org/_sub/prod/images/STHDF-Dashboarh/sthdf-archiv.html" target="_blank" rel="noopener" style="color:var(--signal);">Browse the full project gallery &#8599;</a>
+    &mdash; the fastest way to see what students have built over the years. More useful than the individual editions in the table below.
+  </p>
+</div>
+
 <div class="rev-wrap">
 <table class="rev">
 <caption>Revision history &mdash; course editions</caption>

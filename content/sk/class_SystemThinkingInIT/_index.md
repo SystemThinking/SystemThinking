@@ -25,6 +25,14 @@
 
 <p class="section-lede">Výučba prebieha od roku 2018. Deväť ročníkov, deväť revízií tej istej myšlienky &mdash; tu sú odkazy na študentské výstupy.</p>
 
+<div class="archive-callout" style="border:1px solid var(--line-dim); border-radius:6px; padding:1rem 1.25rem; margin:1.5rem 0; background:var(--blueprint-panel);">
+  <strong style="color:var(--line-strong);">&#128230; Archív semestrálnych projektov</strong>
+  <p style="margin:0.4rem 0 0; color:var(--line-dim);">
+    <a href="https://agnicoli.org/_sub/prod/images/STHDF-Dashboarh/sthdf-archiv.html" target="_blank" rel="noopener" style="color:var(--signal);">Prehľadná galéria všetkých študentských projektov &#8599;</a>
+    &mdash; najrýchlejší spôsob, ako si prezrieť, čo študenti za tie roky vytvorili. Prehľadnejšie než jednotlivé ročníky v tabuľke nižšie.
+  </p>
+</div>
+
 <div class="rev-wrap">
 <table class="rev">
 <caption>Revision history &mdash; ročníky predmetu</caption>
