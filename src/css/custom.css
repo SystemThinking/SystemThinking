@@ -51,34 +51,21 @@ html, body {
   background-size: 34px 34px;
 }
 
-/* subtle per-page tint so the background itself signals "you're on a
-   different page now" — each of the 4 pages gets its own faint glow.
-   About pages stay cool (blue/teal), Course pages stay warm (orange/amber,
-   tied to the --signal accent used on the CTA button) — same family, just
-   a small hue shift per page, not four unrelated colors. */
-body:has(.page-about-sk) {
-  background-image:
-    radial-gradient(1100px 480px at 50% -120px, rgba(123,167,224,0.05), transparent 60%),
-    linear-gradient(var(--grid-line) 1px, transparent 1px),
-    linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
-}
+/* per-page background tint, applied as a solid background-color (not a
+   fading top gradient — that version faded out within the first ~360px
+   and was invisible on pages that scroll past it, which is most of them).
+   color-mix() blends a slice of an existing accent into the base navy, so
+   the tint holds for the full page height. About stays cool (blue/teal),
+   Course stays warm (orange, same --signal as the CTA button) — same
+   family, a real but still restrained shift, not four flat colors. */
 body:has(.page-about-en) {
-  background-image:
-    radial-gradient(1100px 480px at 50% -120px, rgba(127,200,176,0.045), transparent 60%),
-    linear-gradient(var(--grid-line) 1px, transparent 1px),
-    linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+  background-color: color-mix(in srgb, var(--blueprint) 80%, var(--published) 20%);
 }
 body:has(.page-course-sk) {
-  background-image:
-    radial-gradient(1100px 480px at 50% -120px, rgba(255,122,77,0.06), transparent 60%),
-    linear-gradient(var(--grid-line) 1px, transparent 1px),
-    linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+  background-color: color-mix(in srgb, var(--blueprint) 78%, var(--signal) 22%);
 }
 body:has(.page-course-en) {
-  background-image:
-    radial-gradient(1100px 480px at 50% -120px, rgba(255,159,90,0.05), transparent 60%),
-    linear-gradient(var(--grid-line) 1px, transparent 1px),
-    linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+  background-color: color-mix(in srgb, var(--blueprint) 88%, var(--signal) 12%);
 }
 
 /* ---------------------------------------------------------------
