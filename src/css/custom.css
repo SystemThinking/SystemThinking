@@ -1,19 +1,235 @@
+/* ---------------------------------------------------------------
+   SystemThinking.sk — "blueprint" visual identity
+   Ported from the original Hugo/ananke build (assets/css/extra.css)
+--------------------------------------------------------------- */
 :root {
-  --ifm-color-primary: #2b5a9e;
-  --ifm-color-primary-dark: #26518e;
-  --ifm-color-primary-darker: #244d86;
-  --ifm-color-primary-darkest: #1e3f6e;
-  --ifm-color-primary-light: #3063ae;
-  --ifm-color-primary-lighter: #3267b6;
-  --ifm-color-primary-lightest: #3f74c5;
+  --blueprint:       #102a42;
+  --blueprint-deep:  #081a2c;
+  --blueprint-panel: #14324e;
+  --line-strong:     #e3edf5;
+  --line-dim:        #a7c0d6;
+  --line-faint:      rgba(207,224,238,0.18);
+  --grid-line:       rgba(207,224,238,0.05);
+  --signal:          #ff7a4d;
+  --archived:        #8fa9c2;
+  --published:       #7fc8b0;
+  --font-display: 'Big Shoulders Stencil Display', 'Arial Narrow', sans-serif;
+  --font-body:    'IBM Plex Sans', 'Segoe UI', sans-serif;
+  --font-mono:    'IBM Plex Mono', ui-monospace, 'SFMono-Regular', monospace;
+
+  /* Infima overrides — single forced dark theme, no light variant */
+  --ifm-background-color: var(--blueprint);
+  --ifm-background-surface-color: var(--blueprint-panel);
+  --ifm-font-family-base: var(--font-body);
+  --ifm-font-color-base: var(--line-strong);
+  --ifm-heading-color: var(--line-strong);
+  --ifm-color-primary: var(--signal);
+  --ifm-color-primary-dark: #ff6530;
+  --ifm-color-primary-darker: #ff5c22;
+  --ifm-color-primary-darkest: #e2440a;
+  --ifm-color-primary-light: #ff8f68;
+  --ifm-color-primary-lighter: #ff9975;
+  --ifm-color-primary-lightest: #ffb99e;
+  --ifm-link-color: var(--line-strong);
+  --ifm-link-hover-color: var(--signal);
+  --ifm-navbar-background-color: var(--blueprint-deep);
+  --ifm-navbar-link-color: var(--line-dim);
+  --ifm-navbar-link-hover-color: var(--signal);
+  --ifm-footer-background-color: var(--blueprint-deep);
+  --ifm-footer-color: var(--line-dim);
+  --ifm-footer-link-color: var(--line-dim);
+  --ifm-footer-link-hover-color: var(--signal);
+  --ifm-table-border-color: var(--line-faint);
+  --ifm-toc-border-color: var(--line-faint);
 }
 
-[data-theme='dark'] {
-  --ifm-color-primary: #7ba7e0;
-  --ifm-color-primary-dark: #5f92d6;
-  --ifm-color-primary-darker: #4f87d2;
-  --ifm-color-primary-darkest: #2c6cc0;
-  --ifm-color-primary-light: #97bce6;
-  --ifm-color-primary-lighter: #a4c5e9;
-  --ifm-color-primary-lightest: #cbdcf1;
+html, body {
+  background: var(--blueprint);
+  background-image:
+    linear-gradient(var(--grid-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+  background-size: 34px 34px;
 }
+
+/* ---------------------------------------------------------------
+   Navbar / footer — restyled to match, not hidden
+--------------------------------------------------------------- */
+.navbar {
+  border-bottom: 1px solid var(--line-faint);
+  box-shadow: none;
+}
+.navbar__title { font-family: var(--font-display); font-weight: 700; }
+.navbar__link {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.navbar__link--active { color: var(--signal); }
+
+.footer--dark {
+  --ifm-footer-background-color: var(--blueprint-deep);
+  border-top: 1px solid var(--line-faint);
+}
+.footer__copyright {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  opacity: 0.7;
+}
+
+/* ---------------------------------------------------------------
+   Page chrome: kicker + language switcher, title block
+--------------------------------------------------------------- */
+#sth-page {
+  display: block;
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 32px 24px 70px;
+  box-sizing: border-box;
+}
+@media (max-width: 640px) { #sth-page { padding: 24px 18px 50px; } }
+
+.page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+.page-kicker {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: var(--line-dim);
+  margin: 0;
+}
+
+.lang-switch { margin: 0; }
+.lang-switch a { line-height: 0; text-decoration: none; border: none; margin-left: 10px; }
+.lang-switch img { vertical-align: middle; opacity: 0.75; transition: opacity 0.15s ease; }
+.lang-switch img:hover { opacity: 1; }
+
+.title-block {
+  border: 1px solid var(--line-faint);
+  background: var(--blueprint-panel);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-bottom: 28px;
+}
+@media (max-width: 640px) { .title-block { grid-template-columns: 1fr; } }
+.title-block > div {
+  padding: 10px 14px;
+  border-right: 1px solid var(--line-faint);
+}
+.title-block > div:last-child { border-right: none; }
+@media (max-width: 640px) {
+  .title-block > div { border-right: none; border-bottom: 1px solid var(--line-faint); }
+  .title-block > div:last-child { border-bottom: none; }
+}
+.title-block .k {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--line-dim);
+  margin-bottom: 4px;
+}
+.title-block .v {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--line-strong);
+  font-variant-numeric: tabular-nums;
+}
+.title-block .v.hot { color: var(--signal); }
+
+/* ---------------------------------------------------------------
+   Headings / body copy
+--------------------------------------------------------------- */
+#sth-page h1 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(2.1rem, 6vw, 3.4rem);
+  line-height: 1.02;
+  letter-spacing: 0.01em;
+  margin: 0 0 16px;
+  text-wrap: balance;
+  color: var(--line-strong);
+}
+#sth-page h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.6rem, 4vw, 2.1rem);
+  margin: 36px 0 8px;
+  color: var(--line-strong);
+  text-wrap: balance;
+}
+.section-lede { color: var(--line-dim); max-width: 64ch; margin-bottom: 8px; font-size: 1.05rem; }
+
+/* archive callout — reuses blueprint panel look */
+.archive-callout {
+  border: 1px solid var(--line-faint) !important;
+  background: var(--blueprint-panel) !important;
+  margin: 24px 0 !important;
+}
+.archive-callout strong { color: var(--line-strong); font-family: var(--font-mono); font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; }
+.archive-callout p { color: var(--line-dim) !important; }
+.archive-callout a { color: var(--signal) !important; }
+
+/* ---------------------------------------------------------------
+   Revision table
+--------------------------------------------------------------- */
+.rev-wrap { overflow-x: auto; border: 1px solid var(--line-faint); margin: 20px 0 40px; }
+table.rev, #sth-page table { width: 100%; border-collapse: collapse; min-width: 560px; }
+#sth-page table thead tr { background: var(--blueprint-deep); }
+#sth-page table th {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--line-dim);
+  text-align: left;
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--line-faint);
+  border-color: var(--line-faint);
+}
+#sth-page table td {
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--grid-line);
+  border-color: var(--line-faint);
+  font-size: 14px;
+  vertical-align: middle;
+}
+#sth-page table tr:last-child td { border-bottom: none; }
+#sth-page table tbody tr:hover { background: rgba(207,224,238,0.05); }
+#sth-page table td:first-child,
+#sth-page table td:nth-child(2) {
+  font-family: var(--font-mono);
+  color: var(--line-strong);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+#sth-page table a { color: var(--line-strong); text-decoration-color: var(--line-faint); }
+#sth-page table a:hover { text-decoration-color: var(--signal); color: var(--signal); }
+
+.status {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 4px 9px;
+  border: 1px solid currentColor;
+  white-space: nowrap;
+}
+.status.archived { color: var(--archived); }
+.status.published { color: var(--published); }
+.status.current { color: var(--signal); }
+.status .dot { width: 6px; height: 6px; border-radius: 50%; background: currentColor; flex: none; }
+.status.current .dot { animation: pulse 1.6s ease-in-out infinite; }
+@keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.35; } }
+@media (prefers-reduced-motion: reduce) { .status.current .dot { animation: none; } }
