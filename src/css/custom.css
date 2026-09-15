@@ -204,14 +204,81 @@ table.rev, #sth-page table { width: 100%; border-collapse: collapse; min-width: 
 }
 #sth-page table tr:last-child td { border-bottom: none; }
 #sth-page table tbody tr:hover { background: rgba(207,224,238,0.05); }
-#sth-page table td:first-child,
-#sth-page table td:nth-child(2) {
+.rev-id, .rev-year {
   font-family: var(--font-mono);
   color: var(--line-strong);
   font-variant-numeric: tabular-nums;
   white-space: nowrap;
 }
 #sth-page table a { color: var(--line-strong); text-decoration-color: var(--line-faint); }
+table.rev caption {
+  text-align: left;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--line-dim);
+  background: var(--blueprint-panel);
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--line-faint);
+}
+
+/* ---------------------------------------------------------------
+   About page: section headers, spec block, ghost links
+--------------------------------------------------------------- */
+#sth-page h3.subsection {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--signal);
+  margin: 40px 0 14px;
+  font-weight: 600;
+  border: none;
+}
+
+.spec-block {
+  border: 1px solid var(--line-faint);
+  background: var(--blueprint-panel);
+  margin-bottom: 20px;
+}
+.spec-block > div {
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--line-faint);
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 8px 16px;
+}
+.spec-block > div:last-child { border-bottom: none; }
+.spec-block .k {
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--line-dim);
+}
+.spec-block .v {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--line-strong);
+  line-height: 1.6;
+}
+@media (max-width: 640px) {
+  .spec-block > div { grid-template-columns: 1fr; }
+}
+
+.cta-ghost {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  letter-spacing: 0.06em;
+  color: var(--line-dim) !important;
+  text-decoration: none;
+  border-bottom: 1px dashed var(--line-faint);
+  padding-bottom: 2px;
+}
+.cta-ghost:hover { color: var(--line-strong) !important; border-color: var(--line-dim); }
+
+.cta-row { margin: 22px 0 28px; }
 #sth-page table a:hover { text-decoration-color: var(--signal); color: var(--signal); }
 
 .status {
