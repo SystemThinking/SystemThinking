@@ -51,6 +51,16 @@ html, body {
   background-size: 34px 34px;
 }
 
+/* subtle per-section tint so the background itself signals "you're on a
+   different page now" — course pages get a faint warm glow, tied to the
+   same --signal accent used on the CTA button */
+body:has(.page-course) {
+  background-image:
+    radial-gradient(1100px 480px at 50% -120px, rgba(255,122,77,0.06), transparent 60%),
+    linear-gradient(var(--grid-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+}
+
 /* ---------------------------------------------------------------
    Navbar / footer — restyled to match, not hidden
 --------------------------------------------------------------- */
@@ -277,6 +287,22 @@ table.rev caption {
   padding-bottom: 2px;
 }
 .cta-ghost:hover { color: var(--line-strong) !important; border-color: var(--line-dim); }
+
+.cta {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--blueprint-deep) !important;
+  background: var(--signal);
+  border: none;
+  padding: 13px 22px;
+  text-decoration: none !important;
+  display: inline-block;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 12px 100%, 0 calc(100% - 12px));
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+.cta:hover { background: #ff8f68; color: var(--blueprint-deep) !important; transform: translateY(-1px); }
 
 .cta-row { margin: 22px 0 28px; }
 #sth-page table a:hover { text-decoration-color: var(--signal); color: var(--signal); }
